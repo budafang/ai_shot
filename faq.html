@@ -14,6 +14,7 @@
   </script>
   <link rel="stylesheet" href="styles.css">
   <script defer src="analytics.js"></script>
+  <script defer src="faq-contact.js"></script>
 </head>
 <body>
   <nav class="nav">
@@ -86,6 +87,45 @@
             <h3>如果我想引用新聞或案例畫面怎麼辦？</h3>
             <p>建議優先使用可合法引用的素材，或改用口述、重新演繹、示意畫面與清楚標示來源的方式呈現。</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">留言板</div>
+          <h2>還有問題？直接留言給我們</h2>
+          <p>如果你在參賽規則、作品形式、報名流程或主題方向上還有疑問，可以直接在這裡留言。我們會把你的問題寄到活動信箱，並儘快回覆。</p>
+        </div>
+        <div class="contact-board">
+          <form class="contact-form" id="faq-contact-form" action="https://formsubmit.co/ajax/sunnyrain1125@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="AI 素養競賽 FAQ 留言">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="contact-form__hidden" tabindex="-1" autocomplete="off">
+
+            <label class="contact-form__field">
+              <span>姓名</span>
+              <input type="text" name="name" placeholder="請輸入姓名" required>
+            </label>
+
+            <label class="contact-form__field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="name@example.com" required>
+            </label>
+
+            <label class="contact-form__field">
+              <span>問題</span>
+              <textarea name="message" rows="6" placeholder="請輸入你想詢問的問題" required></textarea>
+            </label>
+
+            <div class="contact-form__actions">
+              <button class="btn btn--primary" type="submit">送出留言</button>
+              <p class="contact-form__hint">送出後會顯示確認訊息，並將內容寄到主辦方信箱。</p>
+            </div>
+            <p class="contact-form__status" id="faq-contact-status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
