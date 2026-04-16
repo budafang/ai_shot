@@ -149,7 +149,7 @@ function renderCasesPage() {
         <p style="margin-top:10px;"><strong>來源：</strong>${item.source}</p>
         <p style="margin-top:10px;"><strong>適合拍成：</strong>${getCaseVideoType(item)}</p>
         <p style="margin-top:12px;">
-          <a class="source-link" href="${item.url}" target="_blank" rel="noreferrer">查看來源與查證連結</a>
+            <a class="source-link" data-case-link href="${item.url}" target="_blank" rel="noreferrer">查看來源與查證連結</a>
         </p>
       </article>
     `).join("");

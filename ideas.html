@@ -12,33 +12,8 @@
     gtag('js', new Date());
     gtag('config', 'G-EQXL71C66C');
   </script>
-  <script>
-    document.addEventListener('click', function (event) {
-      var link = event.target.closest('a');
-      if (!link) return;
-
-      var href = link.getAttribute('href') || '';
-      var text = (link.textContent || '').trim();
-      var payload = {
-        link_text: text,
-        link_url: href,
-        page_path: window.location.pathname
-      };
-
-      if (href.indexOf('docs.google.com/forms') !== -1) {
-        gtag('event', 'click_signup', payload);
-      }
-
-      if (
-        href === 'brief.html' ||
-        href.indexOf('drive.google.com/file/d/1320KETKnnv7J6INFeqv_a4XGK7BK0ILR/view') !== -1 ||
-        href.indexOf('drive.usercontent.google.com/uc?id=1320KETKnnv7J6INFeqv_a4XGK7BK0ILR') !== -1
-      ) {
-        gtag('event', 'click_brief', payload);
-      }
-    });
-  </script>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="analytics.js"></script>
   <script defer src="data.js"></script>
   <script defer src="app.js"></script>
 </head>
